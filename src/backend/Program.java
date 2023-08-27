@@ -879,40 +879,72 @@ public class Program {
         System.out.println("--------Question 17-11----------");
         System.out.println("-                                -");
 
-        j=0;
+        j = 0;
         do {
             System.out.println(" Thong tin department thu " + (j + 1) + " la :");
             System.out.println("ID: " + deps[j].id);
             System.out.println("Name: " + deps[j].name);
-            j++;}
-        while (j<deps.length);
+            j++;
+        }
+        while (j < deps.length);
 
         System.out.println("-                                -");
         System.out.println("--------Question 17-12----------");
         System.out.println("-                                -");
 
-        i=0;
+        i = 0;
         do {
             System.out.println(" Thong tin account thu  " + (i + 1) + " la : ");
             System.out.println("Email: " + accArray[i].eMail);
             System.out.println("Fullname: " + accArray[i].fullName);
             System.out.println("Phong ban: " + accArray[i].department.name);
             i++;
-        }while (i<2);
+        } while (i < 2);
 
         System.out.println("-                                -");
         System.out.println("--------Question 17-13----------");
         System.out.println("-                                -");
 
-i=0;
-do {
-    System.out.println(" Thong tin account thu  " + (i + 1) + " la : ");
-    System.out.println("Email: " + accArray[i].eMail);
-    System.out.println("Fullname: " + accArray[i].fullName);
-    System.out.println("Phong ban: " + accArray[i].department.name);
-    i++;
-}while (i<accArray.length);
+        i = 0;
+        do {
+          if (i==1){
+              i++;
+              continue;
+          }
+            System.out.println(" Thong tin account thu  " + (i + 1) + " la : ");
+            System.out.println("Email: " + accArray[i].eMail);
+            System.out.println("Fullname: " + accArray[i].fullName);
+            System.out.println("Phong ban: " + accArray[i].department.name);
+            i++;
+        } while (i <accArray.length);
 
+
+        System.out.println("-                                -");
+        System.out.println("--------Question 17-14----------");
+        System.out.println("-                                -");
+
+        i = 0;
+        do {
+            System.out.println(" Thong tin account thu  " + (i + 1) + " la : ");
+            System.out.println("Email: " + accArray[i].eMail);
+            System.out.println("Fullname: " + accArray[i].fullName);
+            System.out.println("Phong ban: " + accArray[i].department.name);
+            i++;
+        } while (i < 3);
+
+        System.out.println("-                                -");
+        System.out.println("--------Question 17-15----------");
+        System.out.println("-                                -");
+
+        k=0;
+        do {
+            if(k%2==1){
+                k++;
+                continue;}
+                System.out.println(k);
+                k++;
+
+            }while (k<=20);
 
 
 
