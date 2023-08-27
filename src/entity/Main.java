@@ -22,9 +22,9 @@ public class Main {
             // for you, but you can always add more by pressing Ctrl+F8.
             System.out.println("i = " + i);
         }
-        int tong=0;
-        for(int j=1; j<=100; j++){
-            if(j%2==0) {
+        int tong = 0;
+        for (int j = 1; j <= 100; j++) {
+            if (j % 2 == 0) {
                 tong += j;
             }
 
@@ -51,14 +51,14 @@ public class Main {
 
 // Tinh tong cac so nguyen lien tiep voi so nguyen bat ki nhap tu ban phim
 
-        Scanner input= new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Moi nhap vao mot so nguyen bat ki:");
-        int n= input.nextInt();
-        
-        int sum=0;
-        int x=1;
-        for (x=1; x<=n; x++){
-            sum = sum+x;
+        int n = input.nextInt();
+
+        int sum = 0;
+        int x = 1;
+        for (x = 1; x <= n; x++) {
+            sum = sum + x;
         }
         System.out.println(sum);
 
@@ -75,58 +75,66 @@ public class Main {
         // else thi la chuc ban may man vao ngay mai
 
 
-        Scanner chuongTrinh=new Scanner(System.in);
+        Scanner chuongTrinh = new Scanner(System.in);
         System.out.println("Moi ban nhap vao ten cua minh");
-        String name=chuongTrinh.next();
-        System.out.println("Chao mung ban " + name+" den voi chuong trinh cua VTI");
+        String name = chuongTrinh.next();
+        System.out.println("Chao mung ban " + name + " den voi chuong trinh cua VTI");
         System.out.println("Moi ban chon chuc nang:");
-        System.out.println("--------------MENU-----------------");
-        System.out.println("1. In ra ngay thang nam hom nay.");
-        System.out.println("2. In ra con so may man hom nay (tu 1 den 20) -- in ra ngau nhien 1 so tu 1 den 20");
-        System.out.println("3. Kiem tra xem ban phai la nguoi may may hay khong?");
+        boolean isOK = true;
+        while (isOK) {
+            System.out.println("--------------MENU-----------------");
+            System.out.println("1. In ra ngay thang nam hom nay.");
+            System.out.println("2. In ra con so may man hom nay (tu 0 den 99) -- in ra ngau nhien 1 so tu 0 den 99");
+            System.out.println("3. Kiem tra xem ban phai la nguoi may may hay khong?");
 
-        int k=chuongTrinh.nextInt();
-        switch (k){
-            case 1:
-                System.out.println(LocalDate.now());
-                break;
-            case 2:
-                int min=0;
-                int max=99;
-                System.out.println("Hien thi mot so ngau nhien ");
-               int l=(int)(Math.random()*(max-min+1)+min);
-                System.out.println(l);
-                break;
-            case 3:
-                System.out.println("Nhap vao con so ban nghi la may man( tu 0- 99):");
-                int m=chuongTrinh.nextInt();
-                if(m>=100){
-                    System.out.println("Ban phai nhap so ngau nhien trong khoang 0-99");
-                    int q= chuongTrinh.nextInt();
-                    int min1=0;
-                    int max1=99;
-                    int u=(int)(Math.random()*(max1-min1+1)+min1);
-                    if (q==u){
-                        System.out.println("Ban la nguoi may man!");
-                    }else {
-                        System.out.println(" Chuc ban may man lan sau!");
-                        System.out.println("Con so may man cua ngay hom nay la: "+u);
+            int k = chuongTrinh.nextInt();
+            switch (k) {
+                case 1:
+                    System.out.println(LocalDate.now());
+                    break;
+                case 2:
+                    int min = 0;
+                    int max = 99;
+                    System.out.println("Hien thi mot so ngau nhien ");
+                    int l = (int) (Math.random() * (max - min + 1) + min);
+                    System.out.println(l);
+                    break;
+                case 3:
+                    System.out.println("Nhap vao con so ban nghi la may man( tu 0- 99):");
+                    int m = chuongTrinh.nextInt();
+                    if (m >= 100) {
+                        System.out.println("Ban phai nhap so ngau nhien trong khoang 0-99");
+                        int q = chuongTrinh.nextInt();
+                        int min1 = 0;
+                        int max1 = 99;
+                        int u = (int) (Math.random() * (max1 - min1 + 1) + min1);
+                        if (q == u) {
+                            System.out.println("Ban la nguoi may man!");
+                        } else {
+                            System.out.println(" Chuc ban may man lan sau!");
+                            System.out.println("Con so may man cua ngay hom nay la: " + u);
+                        }
+                    } else {
+                        int mn = 0;
+                        int mx = 99;
+                        int p = (int) (Math.random() * (mx - mn + 1) + mn);
+                        if (m == p) {
+                            System.out.println("Ban la nguoi may man!");
+                        } else {
+                            System.out.println(" Chuc ban may man lan sau!");
+                            System.out.println("Con so may man cua ngay hom nay la: " + p);
+                        }
+
+
                     }
-                }else {
-                    int mn=0;
-                    int mx=99;
-                    int p=(int)(Math.random()*(mx-mn+1)+mn);
-                    if (m==p){
-                        System.out.println("Ban la nguoi may man!");
-                    }else {
-                        System.out.println(" Chuc ban may man lan sau!");
-                        System.out.println("Con so may man cua ngay hom nay la: "+p);
-                    }
+            }
+            System.out.println("Neu ban muon tiep tuc an Y= Yes");
+            System.out.println("Neu ban muon dung lai an chu bat ki(Ngoai Y) tu ban phim");
 
+            chuongTrinh.nextLine();
+            String y = chuongTrinh.nextLine();
 
-                }
-
-
+            isOK = "Y".equalsIgnoreCase(y);
 
 
         }

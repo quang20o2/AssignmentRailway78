@@ -819,7 +819,6 @@ public class Program {
                 continue;
             }
 
-
             System.out.println(" Thong tin account thu  " + (i + 1) + " la : ");
             System.out.println("Email: " + accArray[i].eMail);
             System.out.println("Fullname: " + accArray[i].fullName);
@@ -828,6 +827,95 @@ public class Program {
 
 
         }
+        System.out.println("-                                -");
+        System.out.println("--------Question 16-14----------");
+        System.out.println("-                                -");
+
+        i = 0;
+        while (i < accArray.length) {
+            if (i == 3) {
+                break;
+            }
+
+            System.out.println(" Thong tin account thu  " + (i + 1) + " la : ");
+            System.out.println("Email: " + accArray[i].eMail);
+            System.out.println("Fullname: " + accArray[i].fullName);
+            System.out.println("Phong ban: " + accArray[i].department.name);
+            i++;
+        }
+
+        System.out.println("-                                -");
+        System.out.println("--------Question 16-15----------");
+        System.out.println("-                                -");
+        int k = 0;
+        while (k <= 20) {
+            if (k % 2 == 1) {
+                k++;
+                continue;
+            }
+            System.out.println(k);
+            k++;
+        }
+
+        // Do_While
+        // Question 17: Làm lại các Question ở phần FOR bằng cách sử dụng DO-WHILE kết hợp với lệnh break, continue
+
+        System.out.println("-                                -");
+        System.out.println("--------Question 17-10----------");
+        System.out.println("-                                -");
+
+        i = 0;
+        do {
+            System.out.println(" Thong tin account thu  " + (i + 1) + " la : ");
+            System.out.println("Email: " + accArray[i].eMail);
+            System.out.println("Fullname: " + accArray[i].fullName);
+            System.out.println("Phong ban: " + accArray[i].department.name);
+            i++;
+
+        } while (i < accArray.length);
+
+
+        System.out.println("-                                -");
+        System.out.println("--------Question 17-11----------");
+        System.out.println("-                                -");
+
+        j=0;
+        do {
+            System.out.println(" Thong tin department thu " + (j + 1) + " la :");
+            System.out.println("ID: " + deps[j].id);
+            System.out.println("Name: " + deps[j].name);
+            j++;}
+        while (j<deps.length);
+
+        System.out.println("-                                -");
+        System.out.println("--------Question 17-12----------");
+        System.out.println("-                                -");
+
+        i=0;
+        do {
+            System.out.println(" Thong tin account thu  " + (i + 1) + " la : ");
+            System.out.println("Email: " + accArray[i].eMail);
+            System.out.println("Fullname: " + accArray[i].fullName);
+            System.out.println("Phong ban: " + accArray[i].department.name);
+            i++;
+        }while (i<2);
+
+        System.out.println("-                                -");
+        System.out.println("--------Question 17-13----------");
+        System.out.println("-                                -");
+
+i=0;
+do {
+    System.out.println(" Thong tin account thu  " + (i + 1) + " la : ");
+    System.out.println("Email: " + accArray[i].eMail);
+    System.out.println("Fullname: " + accArray[i].fullName);
+    System.out.println("Phong ban: " + accArray[i].department.name);
+    i++;
+}while (i<accArray.length);
+
+
+
+
     }
 
 
